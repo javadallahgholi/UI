@@ -1,0 +1,274 @@
+@font-face {
+    font-family: Vazir;
+    src: url("assets/Font/Vazir.ttf"); format("wolf");
+}
+
+* {
+    font-family: Vazir, sans-serif;
+    direction: rtl;
+    box-sizing: border-box;
+}
+
+
+@media only screen and (min-width: 0px) {
+    /* For desktop: */
+    .col-med-1 {width: 8.33%;}
+    .col-med-2 {width: 16.66%;}
+    .col-med-3 {width: 25%;}
+    .col-med-4 {width: 33.33%;}
+    .col-med-5 {width: 41.66%;}
+    .col-med-6 {width: 50%;}
+    .col-med-7 {width: 58.33%;}
+    .col-med-8 {width: 66.66%;}
+    .col-med-9 {width: 75%;}
+    .col-med-10 {width: 83.33%;}
+    .col-med-11 {width: 91.66%;}
+    .col-med-12 {width: 100%;}
+}
+
+/* for clear-fix Hack!!*/
+.top-bar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.top-bar {
+    padding: 1em 15em;
+}
+
+.logo-top {
+    float: right !important;
+    display: inline-block;
+}
+
+.logo-top img {
+    vertical-align: middle;
+    width: 5em;
+}
+
+.logo-top span {
+    padding-right: 1em;
+    font-size: 2em;
+    color: #464680;
+}
+
+.logo-top span i {
+    font-size: 0.5em;
+}
+
+/*=====================*/
+.login-top {
+    position: relative;
+    float: left !important;
+    display: inline-block;
+    padding-top: 1em;
+}
+
+.login-top span {
+    font-size: 1.7em;
+    font-weight: 300;
+    color: #464680;
+}
+
+.login-top span:hover {
+    color: #7577d7;
+}
+
+.login-top span i {
+    vertical-align: middle;
+    font-size: 1.5em;
+}
+
+/*================*/
+.login-top span .drop-down {
+    position: absolute;
+    display: none;
+    width: 200px;
+    background-color: aliceblue;
+}
+
+.login-top span:hover .drop-down {
+    display: inline-block;
+}
+
+.login-top span:hover .drop-down a {
+    color: #2e2f55;
+    text-decoration: none;
+    padding: 10px 2em;
+    display: block;
+    font-size: .6em;
+}
+
+.login-top span:hover .drop-down a:hover {
+    color: cornflowerblue;
+    background-color: #cad8ff;
+}
+
+/*===============*/
+.navigation {
+    background-color: #545498;
+    color: #2e2f55;
+    padding: 2em 20em;
+}
+
+.navigation .nav-item {
+    font-size: 1.4em;
+    text-align: center;
+    display: inline-block;
+    width: 24%;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation .nav-item i {
+    vertical-align: middle;
+}
+
+#selected-nav-item {
+    color: white;
+}
+
+@media only screen and (max-width: 950px) {
+    .top-bar {
+        padding: 1em 2em;
+    }
+    .navigation {
+        padding: 2em 2em;
+    }
+    .nav-item {
+        width: 49%;
+    }
+}
+
+/*======================*/
+.main-body {
+    padding-bottom: 50px;
+    margin: 10px 15%;
+}
+
+@media only screen and (max-width: 950px) {
+    .main-body {
+        margin: 10px 5%;
+    }
+}
+.print-head h2{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.print-head .btn {
+    display: inline-block;
+    float: left;
+}
+
+.print-head .button {
+    display: inline-block;
+    float: left;
+    border-radius: 7px;
+    background-color: #f57473;
+    color: white;
+    padding: 12px 25px;
+}
+
+.print-head .button:hover {
+    display: inline-block;
+    float: left;
+    border-radius: 7px;
+    background-color: #f77277;
+    color: white;
+    padding: 12px 25px;
+    box-shadow: 2px 2px gray;
+}
+
+/*++++++++++++++++++++++*/
+.tickets {
+    overflow: scroll;
+}
+
+ul.ticket-background {
+    list-style: none;
+    padding: 0;
+
+}
+
+ul.ticket-background li{
+    overflow-x: scroll;
+    margin-bottom: 30px;
+    padding: 15px 25px;
+    background-color: #eaeaea;
+    border-radius: 7px;
+
+}
+
+@media only screen and (max-width: 768px) {
+    ul.ticket-background li{
+        padding: 0;
+    }
+}
+
+
+div.line-info div{
+    display: inline-block;
+    float: right;
+}
+
+@media only screen and (max-width: 768px) {
+    .line-info div{
+        margin-bottom: 15px;
+    }
+}
+
+.line-info {
+    overflow: auto;
+    margin: 15px;
+}
+
+.line-info span {
+    display: inline-block;
+    text-align: center;
+    float: right;
+}
+
+.line-info span.title {
+    color: #575757;
+    font-weight: 500;
+    font-size: 80%;
+}
+
+.line-info.ticket-number span.ticket-id {
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.line-info.location-date div {
+    margin-left: 1%;
+}
+
+.line-info.location-date div > * {
+    display: inline-block;
+    width: 100%;
+}
+
+.line-info.location-date div .info-container {
+    padding: 5px;
+}
+
+.line-info span.title {
+    text-align: right;
+    padding-right: 2%;
+}
+
+.line-info.location-date span.info {
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+@media only screen and (min-width: 768px) {
+    .line-info.location-date .date{
+        width: 28%;
+    }
+}
