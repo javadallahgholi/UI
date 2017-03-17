@@ -17,9 +17,45 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script>
+        var search = [
+            {
+                "price" : "1,850,000",
+                "class" : "C",
+                "airplane" : "425"
+            },
+            {
+                "price" : "1,350,000",
+                "class" : "M",
+                "airplane" : "435"
+            },
+            {
+                "price" : "1,150,000",
+                "class" : "C",
+                "airplane" : "425"
+            },
+            {
+                "price" : "1,450,000",
+                "class" : "M",
+                "airplane" : "435"
+            },
+        ];
+
+        function ascendfunction() {
+            search.sort(function(a, b){return parseFloat(a.price) - parseFloat(b.price);});
+            document.getElementById("id_tooye_htmlemoon").innerHTML = search;
+        }
+
+        function descendfunction() {
+            search.sort(function(a, b){return parseFloat(b.price) - parseFloat(a.price);});
+            document.getElementById("id_tooye_htmlemoon").innerHTML = search;
+        }
+    </script>
+
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css">
 
     <link rel="stylesheet" href="Results.css"/>
+
 </head>
 <body>
 <div class="container">
