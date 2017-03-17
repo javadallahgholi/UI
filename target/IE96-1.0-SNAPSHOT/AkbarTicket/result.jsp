@@ -61,6 +61,28 @@
         </div>
     </div>
     <div class="main-section">
+        <span class="sortorder-title">مرتب سازی قیمت براساس</span>
+        <div class="sorting-direction">
+            <select id="ProductInput_SortCondition_DropDownList" name="ProductInput_SortCondition_DropDownList">
+                <option value="SortCondition-0">نزولی</option>
+                <option value="SortCondition-1">صعودی</option>
+            </select>
+            <span>هواپیمایی</span>
+            <select id="ProductInput_OrderCondition_DropDownList" name="ProductInput_OrderCondition_DropDownList">
+
+                <option value="SortBy-4">A</option>
+                <option value="SortBy-1">B</option>
+                <option value="SortBy-6">C</option>
+                <option value="SortBy-7">D</option>
+            </select>
+            <span>کلاس</span>
+            <select name="ProductInput_OrderCondition_DropDownList">
+
+                <option value="SortBy-4">A</option>
+                <option value="SortBy-1">B</option>
+                <option value="SortBy-6">C</option>
+                <option value="SortBy-7">D</option>
+            </select>
         <div class="flight-data">
             <div class="row">
                 <a class="button-reserve" href="/AkbarTicket/reserve.jsp">

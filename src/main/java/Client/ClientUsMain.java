@@ -5,6 +5,11 @@ import java.io.*;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
+
+//TestCase!
+//search THR MHD 05Feb 1 1 1
+//reserve THR MHD 05Feb IR 452 Y 1 0 0
 
 public class ClientUsMain {
 
@@ -63,6 +68,7 @@ public class ClientUsMain {
 
         tf.setToken(token);
         tf.setSocket(socket);
+        tf.setReserve(reserve);
         return tf;
     }
 
@@ -75,18 +81,21 @@ public class ClientUsMain {
 
         //receiving response from server
         BufferedReader bis = new BufferedReader(new InputStreamReader(toFIN.getSocket().getInputStream()));
-        //reserve THR MHD 05Feb IR 452 Y 1 0 0
-        String input = "c";
-        List<String> tickets = new ArrayList<String>();
-
-        //timer for debug!!!!!!!!!
-        //long startTime = System.currentTimeMillis();
-        //while((System.currentTimeMillis()-startTime)<1000){
-        while ((input = bis.readLine()) != null){
+        Ticket ticket = new Ticket();
+        ArrayList<String> tickets = new ArrayList<String>();
+        String input = "";
+        int passSum = toFIN.getReserve().getAdlultCount() + toFIN.getReserve().getChildCount() + toFIN.getReserve().getInfantCount();
+        for(int i = 0; i < passSum + 1; i++){
             input = bis.readLine();
-            System.out.println(input);
+            tickets.add(input);
         }
+        ticket.setReferenceCode(tickets.get(0));
+        tickets.remove(0);
+        ticket.setTickets(tickets);
+        System.out.println(ticket.getReferenceCode());
+        System.out.println(ticket.getTickets());
     }
 }
+
 
 

@@ -328,6 +328,10 @@
                         </div>
                     </li>
                 </ul>
+                <button class="add pull-right" type="button"> بزرگسال +</button>
+                <button class="add pull-right" type="button"> خورد‌سال +</button>
+                <button class="add pull-right" type="button"> نوزاد +</button>
+                <button class="delete pull-right" type="button"> حذف +</button>
                 <a href="/AkbarTicket/tickets.jsp">
                 <button class="accept pull-left" type="button"> پرداخت و ثبت نهایی <i class="fa fa-angle-left" aria-hidden="true"></i></button>
                 </a>

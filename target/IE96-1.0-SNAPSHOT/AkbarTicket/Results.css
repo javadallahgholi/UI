@@ -122,3 +122,13 @@ body {
     color: #89de89;
     text-decoration: none;
 }
+.sortorder-title {
+    direction: rtl;
+    float: right;
+    margin-right: 20px;
+
+}
+
+.sorting-direction {
+    direction: rtl;
+}
